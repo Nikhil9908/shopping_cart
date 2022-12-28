@@ -45,7 +45,7 @@ router.get('/products/:productId', productController.getProductById)
 
 /*.........................//8// EDIT PRODUCT //.............................................*/
 
-router.put("/products/:productId", productController.updateProduct)
+router.put("/products/productId:", productController.updateProduct)
 
 /*.........................//9// DELETE PRODUCT //.............................................*/
 

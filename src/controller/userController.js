@@ -206,7 +206,7 @@ exports.loginUser = async function (req, res) {
 
     let encryptPwd = checkEmail.password
 
-    await bcrypt.compare(password, encryptPwd, function (err, result) {
+   bcrypt.compare(password, encryptPwd, function (err, result) {
 
       if (result) {
 

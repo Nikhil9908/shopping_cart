@@ -65,7 +65,7 @@ exports.createOrder = async function (req, res) {
   
       const updateOrder = await cartModel.findOneAndUpdate(
         { userId },
-        { $set: { items: [], totalItems: 0, totalPrice: 0 } },
+        { $set: { items: [], totalItems: 0, totalPrice: 0 } },//set-update
         { new: true }
       )
   
@@ -124,7 +124,7 @@ exports.createOrder = async function (req, res) {
           }
       }
   
-      if (orderDetails.cancellable === false) {
+      if (orderDetails.cancellable === false){
         return res.status(400).send({ status: false, message: "Order is not cancellable" })
       } else {
         if (status === "pending") {
